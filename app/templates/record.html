@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+<div class="col-md-4">
+<table class="table table-striped">
+    <thead>
+     <th scope="col">Domain</th><th scope="col">Action</th>
+    </thead>
+    <tbody>
+        {% for domain in record['domainsList'] %}
+        <tr scope="row">
+            <td>{{ domain['domainName'] }}</td><td>{{ domain['action'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+
+<div class="col-md-4">
+<h3>Key</h3>
+<ul>
+<li>added - recently added whois record
+<li>dropped - recently removed/frozen whois record (takedown)
+</ul>
+<h3>Unmask the Results</h3>
+<p>This is a demo of a free service, unfortunately unmasked data is a premium service. <br>
+If you wish to trial the premium service we can give you a limited trial version.<br>
+Please contact us if you wish to retain a premium service.
+</p>
+<p>Click this link to head <a href="{{ url_for('index') }}">Back</a> to the main page.</p>
+</div>
+{% endblock %}

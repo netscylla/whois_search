@@ -1,0 +1,31 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {{ title }} - Search Whois Logs
+{% endblock %}
+
+{% block navbar %}
+    <nav class="navbar navbar-default">
+        <a itemprop="url" class="navbar-brand" rel="home" href="https://www.netscylla.com" title="Netscylla"> <img style="max-width:100px; margin-top: -7px;" src="/static/logo_sm.png" width="40" alt="small logo"></a>
+        <a class="navbar-brand active" href="https://www.netscylla.com">Netscylla</a>
+        <a class="navbar-brand active" href="/">Whois Search</a>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <div class="container"
+    <p>This service demonstrates the capability to query new events on the Whois registration database. Limited to the past 14 days</p>
+    </div>
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-info" role="alert">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        {# application content needs to be provided in the app_content block #}
+        {% block app_content %}{% endblock %}
+    </div>
+{% endblock %}
