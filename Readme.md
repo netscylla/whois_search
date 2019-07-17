@@ -51,4 +51,6 @@ You should see
 
 ![screenshot](pics/ns_whois_screen.png)
 
+### Example 1: github & 14 days
+
 ![screenshot2](pics/ns_whois_screen2.png)
