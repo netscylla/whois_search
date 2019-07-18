@@ -22,8 +22,6 @@ Register for an account at [https://www.whoisxmlapi.com](https://www.whoisxmlapi
 
 ## Usage
 
-Edit the Docker file and insert your API key into the APIKEY variable
-
 ### Docker
 Build the Docker image
 ```
