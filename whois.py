@@ -30,8 +30,8 @@ def whois_search(keyword,days):
 
   if (r.status_code != 200 ):
     return("[-] DEBUG Something went wrong?, exiting...")
-    if (r.status_code != 503 ):
-      return("[-] DEBUG Resource exhausted, wait and try again later.")
+  if (r.status_code != 503 ):
+    return("[-] DEBUG Resource exhausted, wait and try again later.")
     exit(0)
 
   return(r.text)
